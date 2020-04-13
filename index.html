@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+</head>
+
+
+<body onload="text()">
+
+  <div class="topHead">
+    <h1 id="topname">text editor</h1>
+  </div>
+  <div class="main">
+    <div class="firstblock">
+      <div class="comments" id="bordertext">
+        <div class="myComment">
+          <form method="post" name="form">
+            <input name="comment" rows="1" placeholder="Ваше сообщение" class="mess" id="textfield1">
+          </form>
+          <button type="submit" class="btn" onclick="plusb1()">Отправить</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hideblock">
+      <p id="btnblock">
+
+        <button class="plus" id="plusbtn"> <span class="material-icons">
+            fiber_manual_record
+          </span></button>
+      </p>
+    </div>
+
+    <div class="comments3" id="bordertext3">
+      <div class="myComment" name="form">
+        <form method="post" name="form">
+          <input name="comment" rows="1" placeholder="Ваше сообщение" class="mess" id="textfield2">
+        </form>
+        <button class="btn" onclick="plusb2()">Отправить</button>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="secondblock">
+      <div class="comments1" id="bordertext2">
+        <div class="myComment">
+          <form method="get" name="form">
+            <input name="comment" rows="1" placeholder="Ваше сообщение" class="mess" id="textfield3">
+          </form>
+          <button class="btn" onclick="plusb3()">Отправить</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <script>
+    // textfield.onblur = function () {
+    //   bordertext.style.boxShadow = "none";
+    //   plusbtn.style.display = "none";
+    // }
+    // textfield.onfocus = function () {
+    //   plusbtn.style.display = "block";
+    //   bordertext.style.boxShadow = "24px 24px 0px -5px #009432";
+    //   // bordertext.innerHTML = 
+    // }
+
+    function plusb1() {
+      let c = document.getElementById('textfield1');
+      alert(c.value);
+    }
+
+    function plusb2() {
+      let a = document.getElementById('textfield2');
+      alert(a.value);
+    }
+
+    function plusb3() {
+      let b = document.getElementById('textfield3');
+      alert(b.value);
+    }
+
+    function text() {
+      let r = ['#F79F1F', '#A3CB38', '#1289A7', '#D980FA', '#B53471', '#EE5A24', '#009432', '#0652DD', '#9980FA',
+        '#833471'
+      ];
+      let rgb = Math.floor(Math.random() * r.length);
+      topname.style.color = r[rgb];
+
+    }
+    setInterval('text()', 9000);
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
